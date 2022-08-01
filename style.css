@@ -1,0 +1,115 @@
+:root {
+    --main-black:rgb(35,31,32);
+    --main-white: #FDFFF6;
+    --main-grey: #C1CAD6;
+    --main-secondary: #0b77bf;
+    --main-tertiary: #05ae5f;
+    --main-exit: #e52a2a;
+}
+
+*{
+    margin:0;
+    color: var(--main-black);
+}
+body{
+    background-color: var(--main-white);
+}
+
+#header{
+    text-align: center;
+    padding: 50px;
+    background-color: var(--main-secondary);
+}
+
+#header > h1{
+    color: var(--main-white);
+    margin-bottom: 25px;
+}
+#header > p{
+    color: var(--main-white);
+    padding: 0 10%
+}
+
+#cta{
+    display:flex;
+    justify-content: center;
+    margin: 75px 0 25px;
+}
+
+h6{
+    display: inline-block;
+    font-weight: 500;
+    padding: 2px 10px;
+    font-size: 20px;
+
+}
+
+ul{
+    padding-left:0;
+}
+#main-content > ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#main-content > ul > li{
+    width:45%;
+    padding:12px;
+}
+
+li{
+    list-style-type: none;
+    background-color: var(--main-grey);
+    /* width:40%; */
+    box-sizing: border-box;
+    padding: 3px 0 3px 3%;
+    margin:2px;
+}
+li > ul > li > ul >li > ul > li > ul > li{
+    padding-left:0;
+    margin: 2px 0;
+}
+
+button{
+    font-weight:800;
+    color:var(--main-white);
+    background-color: var(--main-secondary);
+    border:none;
+    border-radius: 3px;
+    transition:0.2s ease all;
+}
+button:hover{
+    background-color: var(--main-tertiary);
+    transition:0.5s ease all;
+}
+.delete-task:hover{
+    background-color: var(--main-exit);
+}
+
+#add-toplevel-task{
+    width:27px;
+    height:27px;
+}
+input[type="text"]{
+    text-align: right;
+    width:50%;
+    min-width:140px;
+    border: none;
+}
+input[type="checkbox"]{
+    border:none;
+}
+
+
+/* Talk to developers about necessity of limiting tasks to 4 levels deep */
+
+
+@media only screen and (max-width: 600px) {
+    #main-content > ul > li{
+        width:80%;
+    } 
+    input[type="text"]{
+        width:60%;
+    }
+   
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <script src="todo.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="header">
+      <h1>Task To-Do List</h1>
+      <p>An action item to-do list that keeps track of your thoughts. Use our tool below to keep track of tasks in all stages of completion. You can even add multiple layers to individual tasks!</p>
+    </div>
+    <div id="main-content">
+      <div id="cta">
+        <h6>Add a task to your to-do list</h6>
+        <button type="button" id="add-toplevel-task">+</button>  
+      </div>
+      <ul id="toplevel-tasks">
+        <li class="task">
+          <input type="checkbox" class="task-done">
+          <input type="text">
+          <button type="button" class="add-subtask">+</button>
+          <button type="button" class="delete-task">×</button>
+          <ul class="subtasks"></ul>
+        </li>
+      </ul>
+    </div>
+    
+  </body>
+</html>
